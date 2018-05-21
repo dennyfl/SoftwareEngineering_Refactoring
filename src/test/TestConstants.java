@@ -14,4 +14,6 @@ public class TestConstants {
 	public static final Customer TEST_COSTUMER = new Customer(CUSTOMER_NAME);
 	public static final Customer TEST_COSTUMER_ONE_RENTAL = new Customer(CUSTOMER_NAME);
 	public static final Customer TEST_COSTUMER_TWO_RENTALS = new Customer(CUSTOMER_NAME);
+	public static final Customer TEST_COSTUMER_ONE_RENTAL_HTML = new Customer(CUSTOMER_NAME);
+	public static final Customer TEST_COSTUMER_TWO_RENTALS_HTML = new Customer(CUSTOMER_NAME);
 }
