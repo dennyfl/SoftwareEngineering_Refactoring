@@ -21,7 +21,6 @@ public class CustomerTest {
 	@Test
 	public void testCustomerStatementOneRental() {
 		TestConstants.TEST_COSTUMER_ONE_RENTAL.addRental(TestConstants.TEST_RENTAL_1);
-		System.out.println(TestConstants.TEST_COSTUMER_ONE_RENTAL.statement());
 		assertEquals(
 				"Rental Record for " + TestConstants.CUSTOMER_NAME + "\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t"
 						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 0.0 + "\n"
@@ -33,7 +32,6 @@ public class CustomerTest {
 	public void testCustomerStatementTwoRentals() {
 		TestConstants.TEST_COSTUMER_TWO_RENTALS.addRental(TestConstants.TEST_RENTAL_1);
 		TestConstants.TEST_COSTUMER_TWO_RENTALS.addRental(TestConstants.TEST_RENTAL_2);
-		System.out.println(TestConstants.TEST_COSTUMER_TWO_RENTALS.statement());
 		assertEquals(
 				"Rental Record for " + TestConstants.CUSTOMER_NAME + "\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t"
 						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 0.0 + "\n" + "\t"
