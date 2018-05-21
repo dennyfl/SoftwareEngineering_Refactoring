@@ -19,6 +19,13 @@ public class CustomerTest {
 	}
 
 	@Test
+	public void testCustomerHtmlStatementNoRental() {
+		assertEquals("<H1>Rentals for <EM>TestUser</EM></H1><P>" + "\n"
+		+ "<P>You owe <EM>0.0</EM><P>" + "\n"
+		+ "On this rental you earned <EM>0</EM> frequent renter points<P>", TestConstants.TEST_COSTUMER.htmlStatement());
+	}
+	
+	@Test
 	public void testCustomerStatementOneRental() {
 		TestConstants.TEST_COSTUMER_ONE_RENTAL.addRental(TestConstants.TEST_RENTAL_1);
 		assertEquals(
