@@ -17,8 +17,8 @@ public class MovieTest {
 
 	@Test
 	public void testMoviePrice() {
-		assertEquals(4, TestConstants.TEST_MOVIE_1.getPriceCode());
-		assertEquals(5, TestConstants.TEST_MOVIE_2.getPriceCode());
+		assertEquals(Movie.CHILDRENS, TestConstants.TEST_MOVIE_1.getPriceCode());
+		assertEquals(Movie.NEW_RELEASE, TestConstants.TEST_MOVIE_2.getPriceCode());
 	}
 
 	@Test

@@ -31,8 +31,8 @@ public class CustomerTest {
 		TestConstants.TEST_COSTUMER_ONE_RENTAL.addRental(TestConstants.TEST_RENTAL_1);
 		assertEquals(
 				"Rental Record for " + TestConstants.CUSTOMER_NAME + "\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t"
-						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 0.0 + "\n"
-						+ "Amount owed is " + 0.0 + "\n" + "You earned " + 1 + " frequent renter points",
+						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 996.0 + "\n"
+						+ "Amount owed is " + 996.0 + "\n" + "You earned " + 1 + " frequent renter points",
 				TestConstants.TEST_COSTUMER_ONE_RENTAL.statement());
 	}
 
@@ -41,8 +41,8 @@ public class CustomerTest {
 		TestConstants.TEST_COSTUMER_ONE_RENTAL_HTML.addRental(TestConstants.TEST_RENTAL_1);
 		assertEquals(
 				"<H1>Rentals for <EM>TestUser</EM></H1><P>" + "\n" 
-						+ "Terminator 1: 0.0<BR>" + "\n"
-						+ "<P>You owe <EM>0.0</EM><P>" + "\n"
+						+ "Terminator 1: 996.0<BR>" + "\n"
+						+ "<P>You owe <EM>996.0</EM><P>" + "\n"
 						+ "On this rental you earned <EM>1</EM> frequent renter points<P>",
 				TestConstants.TEST_COSTUMER_ONE_RENTAL_HTML.htmlStatement());
 	}
@@ -53,9 +53,9 @@ public class CustomerTest {
 		TestConstants.TEST_COSTUMER_TWO_RENTALS.addRental(TestConstants.TEST_RENTAL_2);
 		assertEquals(
 				"Rental Record for " + TestConstants.CUSTOMER_NAME + "\n" + "\t" + "Title" + "\t" + "\t" + "Days" + "\t"
-						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 0.0 + "\n" + "\t"
-						+ "Terminator 2" + "\t" + "\t" + 42 + "\t" + 0.0 + "\n" + "Amount owed is " + 0.0 + "\n"
-						+ "You earned " + 2 + " frequent renter points",
+						+ "Amount" + "\n" + "\t" + "Terminator 1" + "\t" + "\t" + 666 + "\t" + 996.0 + "\n" + "\t"
+						+ "Terminator 2" + "\t" + "\t" + 42 + "\t" + 126.0 + "\n" + "Amount owed is " + 1122.0 + "\n"
+						+ "You earned " + 3 + " frequent renter points",
 				TestConstants.TEST_COSTUMER_TWO_RENTALS.statement());
 	}
 
@@ -64,9 +64,9 @@ public class CustomerTest {
 		TestConstants.TEST_COSTUMER_TWO_RENTALS_HTML.addRental(TestConstants.TEST_RENTAL_1);
 		TestConstants.TEST_COSTUMER_TWO_RENTALS_HTML.addRental(TestConstants.TEST_RENTAL_2);
 		assertEquals(
-				"<H1>Rentals for <EM>TestUser</EM></H1><P>" + "\n" + "Terminator 1: 0.0<BR>" + "\n"
-						+ "Terminator 2: 0.0<BR>" + "\n" + "<P>You owe <EM>0.0</EM><P>" + "\n"
-						+ "On this rental you earned <EM>2</EM> frequent renter points<P>",
+				"<H1>Rentals for <EM>TestUser</EM></H1><P>" + "\n" + "Terminator 1: 996.0<BR>" + "\n"
+						+ "Terminator 2: 126.0<BR>" + "\n" + "<P>You owe <EM>1122.0</EM><P>" + "\n"
+						+ "On this rental you earned <EM>3</EM> frequent renter points<P>",
 				TestConstants.TEST_COSTUMER_TWO_RENTALS_HTML.htmlStatement());
 	}
 }
