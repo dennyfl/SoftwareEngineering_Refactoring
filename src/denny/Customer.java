@@ -42,7 +42,8 @@ public class Customer {
 		while (rentals.hasMoreElements()) {
 			Rental each = (Rental) rentals.nextElement();
 			// show figures for each rental
-			result += each.getMovie().getTitle() + ": " + String.valueOf(each.getMovie().getCharge(each.getDaysRented())) + "<BR>\n";
+			result += each.getMovie().getTitle() + ": "
+					+ String.valueOf(each.getMovie().getCharge(each.getDaysRented())) + "<BR>\n";
 		}
 		// add footer lines
 		result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) + "</EM><P>\n";
@@ -66,7 +67,7 @@ public class Customer {
 		Enumeration rentals = _rentals.elements();
 		while (rentals.hasMoreElements()) {
 			Rental each = (Rental) rentals.nextElement();
-			result += each.getFrequentRenterPoints();
+			result += each.getMovie().getFrequentRenterPoints(each.getDaysRented());
 		}
 		return result;
 	}
